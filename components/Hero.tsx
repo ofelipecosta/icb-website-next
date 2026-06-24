@@ -25,7 +25,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative w-full h-screen md:h-[70vh] overflow-hidden bg-navy-900">
+    <section className="relative w-full h-screen md:h-[70vh] overflow-hidden bg-navy-600">
       {/* Background Image */}
       <Image
         src={aereo1}
