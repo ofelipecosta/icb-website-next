@@ -60,7 +60,7 @@ export default function Header() {
               src={logoICB}
               alt="Iate Clube Brasileiro"
               height={56}
-              width="auto"
+              width={undefined}
               className="h-14 w-auto"
             />
           </Link>
