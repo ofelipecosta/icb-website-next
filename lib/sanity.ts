@@ -1,8 +1,8 @@
 import { createClient } from '@sanity/client'
 import { createImageUrlBuilder, type SanityImageSource } from '@sanity/image-url'
 
-const projectId = import.meta.env.VITE_SANITY_PROJECT_ID as string | undefined
-const dataset = (import.meta.env.VITE_SANITY_DATASET as string | undefined) ?? 'production'
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID as string | undefined
+const dataset = (process.env.NEXT_PUBLIC_SANITY_DATASET as string | undefined) ?? 'production'
 
 /**
  * True quando o projeto Sanity está configurado (variáveis de ambiente presentes).

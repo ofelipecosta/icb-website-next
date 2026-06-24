@@ -1,9 +1,10 @@
-'use client'
-
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import { getNoticias, formatDataCurta } from '@/lib/content'
 
-export default function Noticias() {
+export default async function Noticias() {
+  const noticias = await getNoticias()
+
   return (
     <section className="noticias-section">
       <div className="container">
@@ -17,18 +18,16 @@ export default function Noticias() {
           </Link>
         </div>
         <div className="noticias-grid">
-          <article className="noticia-card">
-            <h3>Agradecimento</h3>
-            <p>Agradeçemos a todos que participaram dos eventos do mês de outubro.</p>
-            <Link href="#" className="noticia-link">Saiba mais →</Link>
-            <span className="noticia-date">08 de outubro</span>
-          </article>
-          <article className="noticia-card">
-            <h3>Dia das Crianças</h3>
-            <p>Dia das Crianças é no ICB! Confira as atividades especiais.</p>
-            <Link href="#" className="noticia-link">Saiba mais →</Link>
-            <span className="noticia-date">08 de outubro</span>
-          </article>
+          {noticias.map((noticia) => (
+            <article key={noticia._id} className="noticia-card">
+              <h3>{noticia.titulo}</h3>
+              <p>{noticia.resumo}</p>
+              <Link href={`/noticias/${noticia.slug}`} className="noticia-link">
+                Saiba mais →
+              </Link>
+              <span className="noticia-date">{formatDataCurta(noticia.data)}</span>
+            </article>
+          ))}
         </div>
       </div>
     </section>
