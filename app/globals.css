@@ -224,7 +224,7 @@ html {
 /* ===== Nossa História ===== */
 .historia-hero { position: relative; background: var(--navy-deep); min-height: 380px; display: flex; align-items: flex-end; overflow: hidden; }
 @media (max-width: 600px) { .historia-hero { min-height: 220px; } .historia-hero-inner { padding-block: 48px 36px; } }
-.historia-hero::before { content: ''; position: absolute; inset: 0; background: url('../imagens/aero_nova_01.png') center/cover no-repeat; opacity: 0.28; }
+.historia-hero::before { content: ''; position: absolute; inset: 0; background: url('/imagens/aero_nova_01.png') center/cover no-repeat; opacity: 0.28; }
 .historia-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--navy-deep) 0%, transparent 60%); }
 .historia-hero-inner { position: relative; z-index: 2; padding-block: 80px 64px; }
 .historia-hero--compact { min-height: 220px; }
