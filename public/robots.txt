@@ -1,0 +1,13 @@
+# Robots.txt for Iate Clube Brasileiro
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.next
+Disallow: /api
+
+# Crawl delay (ms)
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://icb-website-bay.vercel.app/sitemap.xml
