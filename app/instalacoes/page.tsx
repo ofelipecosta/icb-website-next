@@ -49,6 +49,7 @@ export default async function InstalacoesPag() {
             </div>
           ))}
         </div>
+      </div>
     </div>
   )
 }
